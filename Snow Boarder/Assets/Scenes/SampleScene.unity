@@ -250,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000012344336, y: 0.18545721, z: 0.000000002329762, w: 0.98265237}
+  m_LocalRotation: {x: 0.00000002264793, y: 0.18533243, z: -0.000000004271393, w: 0.9826759}
   m_LocalPosition: {x: 1.71, y: -0.284, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -491,7 +491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276681557}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000012344334, y: 0.1854572, z: 0.0000000023297615, w: 0.98265237}
+  m_LocalRotation: {x: 0.000000022647923, y: 0.18533239, z: -0.0000000042713917, w: 0.9826759}
   m_LocalPosition: {x: 1.71, y: -0.284, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1303,7 +1303,7 @@ SurfaceEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Speed: 10
+  m_Speed: 20
   m_SpeedVariation: 0
   m_ForceScale: 0.1
   m_UseContactForce: 0
@@ -1495,6 +1495,7 @@ GameObject:
   - component: {fileID: 2120111300}
   - component: {fileID: 2120111301}
   - component: {fileID: 2120111302}
+  - component: {fileID: 2120111303}
   m_Layer: 0
   m_Name: Mutulici
   m_TagString: Untagged
@@ -1532,8 +1533,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.5
+  m_AngularDamping: 15
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1619,6 +1620,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.32, y: 0.7449585}
   m_Radius: 0.32495856
+--- !u!114 &2120111303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120111294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2315c2c238695943847c8c65d9d8b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torqueAmount: 9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
