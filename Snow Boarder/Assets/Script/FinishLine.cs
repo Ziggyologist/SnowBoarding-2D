@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
-    [SerializeField] float reloadDelay = 1f;
+    [SerializeField] float reloadDelay = 3f;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
