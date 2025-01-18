@@ -4,13 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] float reloadDelay = 1f;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Debug.Log("Mutulici s-a lovit la cap.");
-            SceneManager.LoadScene(0);
+            Invoke(nameof(ReloadScene), reloadDelay);
         }
+    }
+
+    private void ReloadScene()
+    {
+        Debug.Log("Mutulici s-a lovit la cap.");
+        SceneManager.LoadScene(0);
     }
 }

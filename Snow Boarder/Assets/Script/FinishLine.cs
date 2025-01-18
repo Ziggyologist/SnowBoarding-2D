@@ -4,13 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
-    SceneManager SceneManager;
+    [SerializeField] float reloadDelay = 1f;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Mutulici a terminat");
-            SceneManager.LoadScene(0);
+            Invoke(nameof(ReloadScene), reloadDelay);
         }
+    }
+
+    private void ReloadScene()
+    {
+        Debug.Log("Mutulici a terminat");
+        SceneManager.LoadScene(0); 
     }
 }
