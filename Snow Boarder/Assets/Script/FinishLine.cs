@@ -4,11 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
-    [SerializeField] float reloadDelay = 3f;
+    [SerializeField] float reloadDelay = 2f;
+    [SerializeField] ParticleSystem finishSFX;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            finishSFX.Play();
             Invoke(nameof(ReloadScene), reloadDelay);
         }
     }
