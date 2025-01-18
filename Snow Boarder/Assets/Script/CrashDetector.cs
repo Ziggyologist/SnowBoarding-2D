@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class CrashDetector : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class CrashDetector : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             Debug.Log("Mutulici s-a lovit la cap.");
+            SceneManager.LoadScene(0);
         }
     }
 }
