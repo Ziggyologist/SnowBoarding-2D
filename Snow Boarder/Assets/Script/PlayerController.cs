@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float torqueAmount = 9f;
+    [SerializeField] float torqueAmount = 
+        9f;
     Rigidbody2D rb;
     CircleCollider2D spriteHead;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
