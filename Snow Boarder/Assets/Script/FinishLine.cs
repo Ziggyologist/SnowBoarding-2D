@@ -7,12 +7,15 @@ public class FinishLine : MonoBehaviour
     [SerializeField] float reloadDelay = 2f;
     [SerializeField] ParticleSystem finishFX;
 
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             finishFX.Play();
             GetComponent<AudioSource>().Play();
+            FindFirstObjectByType<PlayerController>().DisableControls();
+            FindFirstObjectByType<PlayerController>().SetFinishSpeed();
             Invoke(nameof(ReloadScene), reloadDelay);
         }
     }
