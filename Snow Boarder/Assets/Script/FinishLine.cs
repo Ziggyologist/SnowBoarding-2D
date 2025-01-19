@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 public class FinishLine : MonoBehaviour
 {
     [SerializeField] float reloadDelay = 2f;
-    [SerializeField] ParticleSystem finishSFX;
+    [SerializeField] ParticleSystem finishFX;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            finishSFX.Play();
+            finishFX.Play();
+            GetComponent<AudioSource>().Play();
             Invoke(nameof(ReloadScene), reloadDelay);
         }
     }
